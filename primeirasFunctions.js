@@ -99,3 +99,29 @@ function confirmarDados(nome, idade){
 }
 
 confirmarDados('Marcos', 40);
+
+//colocando em prática 2.1.7
+function  wageIncrease(salary){
+    try {
+        switch (true) {
+            case salary <= 1500:
+                return salary*1.2;
+
+            case salary > 1500 && salary <= 2000:
+                return salary*1.15;
+
+            case salary > 2000 && salary <= 3000:
+                return salary*1.1;
+
+            case salary > 3000:
+                return salary*1.05;
+        
+            default:
+                throw new error();
+        }
+    } catch (error) {
+        console.log("Por favor, informe os dados corretamente!")
+    }
+}
+
+wageIncrease(1500);
